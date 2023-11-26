@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { ActualHour } from '@/components/ActualHour'
+import InputDeleteFirstWord from '@/components/InputDeleteFirstWord'
 
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
       </Head>
       <main className={`${styles.main}`}>
         <ActualHour></ActualHour>
+        <br/>
+        <InputDeleteFirstWord></InputDeleteFirstWord>
       </main>
     </>
   )
