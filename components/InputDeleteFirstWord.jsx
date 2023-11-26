@@ -7,14 +7,16 @@ const InputDeleteFirstWord = () => {
     const handleDeleteText = () => {
         const newText = structuredClone(userText);
         const words = newText.split(" ");
-        const deletedFirstWord = words.slice(1,-1).join(" ")
-        console.log(deletedFirstWord)
+        words.shift()
+        setUserText(words.join(" "))
     }
   return (
     <div>
         
         <input onChange={(e)=>{setUserText(e.target.value)}} placeholder='Write a sentence'></input>
         <button onClick={()=>{handleDeleteText()}}>Delete first word</button>
+        <br/>
+        {userText}
         
     </div>
   )
