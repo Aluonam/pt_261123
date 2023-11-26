@@ -6,10 +6,12 @@ export const ActualHour = () => {
 
     useEffect(() => {
       const interval = setInterval(()=>{
-        const date = new Date()
-        console.log(date)
-      }, 1000)
-      interval
+            const date = new Date()
+            const onlyNumber = date.toLocaleDateString()
+            console.log(onlyNumber)
+            }, 1000)
+        return () => clearInterval(interval)
+     
     }, [])
     
   return (
